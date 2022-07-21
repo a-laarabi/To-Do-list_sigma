@@ -20,16 +20,27 @@ describe ('delete task from To do list', () => {
     }
   ]
 
-  it ('', () => {
+  it ('delete item from tasks array', () => {
     deleteItem(tasksArr, 1);
     expect(tasksArr).toHaveLength(2);
   })
 
-  it('', () => {
+  it('Check item from localstorage', () => {
     expect(localStorage.getItem('data')).toHaveLength(2);
   });
 
-  it ('', () => {
+  it ('Check the item description', () => {
     expect(tasksArr[0].description).toBe('Task 1');
+  })
+  it ('Check the item description', () => {
+    expect(tasksArr[1].description).toBe('Task 3');
+  })
+
+  it ('Check the index of item', () => {
+    expect(tasksArr[0].index).toBe(1);
+  })
+
+  it ('Check the index of item', () => {
+    expect(tasksArr[1].index).toBe(2);
   })
 });
