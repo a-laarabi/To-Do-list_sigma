@@ -29,4 +29,22 @@ describe('addTask to the To Do List', () => {
   it('check the id of the task', () => {
     expect(tasksArr[0].index).toBe(1);
   });
+ describe('check of the function add other tasks', () => {
+
+    it('check of the function add other tasks', () => {
+      expect(addIteam(tasksArr)).toHaveLength(2);
+    });
+
+    it('LocalStorage should be updated', () => {
+      expect(localStorage.getItem('data')).toHaveLength(2);
+    });
+
+    it('check of the function add other tasks', () => {
+      expect(addIteam(tasksArr)).toHaveLength(3);
+    });
+
+    it('check if the id of the task', () => {
+      expect(tasksArr[2].index).toBe(3);
+    });
+    });
  });
