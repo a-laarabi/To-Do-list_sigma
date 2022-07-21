@@ -1,7 +1,7 @@
-import deleteItem from '../modules/__mock__/delete.mock';
-import localStorage from '../modules/__mock__/localStorage.mock';
+import deleteItem from '../modules/__mock__/delete.mock.js';
+import localStorage from '../modules/__mock__/localStorage.mock.js';
 
-describe ('delete task from To do list', () => {
+describe('delete task from To do list', () => {
   const tasksArr = [
     {
       index: 1,
@@ -17,30 +17,30 @@ describe ('delete task from To do list', () => {
       index: 3,
       description: 'Task 3',
       completed: true,
-    }
-  ]
+    },
+  ];
 
-  it ('delete item from tasks array', () => {
+  it('delete item from tasks array', () => {
     deleteItem(tasksArr, 1);
     expect(tasksArr).toHaveLength(2);
-  })
+  });
 
   it('Check item from localstorage', () => {
     expect(localStorage.getItem('data')).toHaveLength(2);
   });
 
-  it ('Check the item description', () => {
+  it('Check the item description', () => {
     expect(tasksArr[0].description).toBe('Task 1');
-  })
-  it ('Check the item description', () => {
+  });
+  it('Check the item description', () => {
     expect(tasksArr[1].description).toBe('Task 3');
-  })
+  });
 
-  it ('Check the index of item', () => {
+  it('Check the index of item', () => {
     expect(tasksArr[0].index).toBe(1);
-  })
+  });
 
-  it ('Check the index of item', () => {
+  it('Check the index of item', () => {
     expect(tasksArr[1].index).toBe(2);
-  })
+  });
 });

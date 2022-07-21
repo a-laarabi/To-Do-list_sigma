@@ -1,4 +1,4 @@
-import localStorage from './localStorage.mock';
+import localStorage from './localStorage.mock.js';
 
 const deleteItem = (tasksArr, index) => {
   tasksArr.splice(index, 1);
