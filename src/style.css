@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
+  background-color: #fff;
+  box-shadow: 1px 5px 18px -1px rgb(34 60 80 / 19%);
+}
+
+.header {
+  display: flex;
+  padding-top: 5%;
+}
+
+.fa {
+  margin-left: auto;
+  margin-right: 20px;
+  color: #787878;
+}
+
+.refresh {
+  font-size: 24px;
+}
+
+h1 {
+  text-align: center;
+  margin-left: 20px;
+  color: #787878;
+  font-family: monospace;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.add {
+  margin-top: 30px;
+  padding: 10px 0 10px 20px;
+  border: none;
+  font-style: italic;
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.item {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid #787878;
+  padding: 15px;
+}
+
+.itemP {
+  font-size: 1.3em;
+}
+
+.material-icons {
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.clear {
+  background: #ddd;
+  border: none;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  color: #787878;
+  cursor: pointer;
+}
+
+.strike {
+  color: rgb(113, 109, 109);
+  text-decoration: line-through;
+}
+
+.clicked-on {
+  background-color: #dfdebc;
+}
+
+.inactive-dots {
+  display: none;
+}
+
+.dots {
+  cursor: pointer;
+}
+
+.trash {
+  display: none;
+  cursor: pointer;
+}
+
+.active-trash {
+  display: block;
+}
+
+.new-input {
+  background-color: #dfdebc;
+}
