@@ -2,8 +2,8 @@
 * @jest-environment jsdom
 */
 
-import editIteam from '../modules/_mock_/edit.mock.js';
-import localStorage from '../modules/_mock_/localStorage.mock.js';
+import editIteam from '../modules/__mock__/edit.mock.js';
+import localStorage from '../modules/__mock__/localStorage.mock.js';
 
 describe('edit tasks in the To Do List', () => {
   const tasksArr = [
@@ -31,9 +31,9 @@ describe('edit tasks in the To Do List', () => {
 
   it('check the length of the local Storage', () => {
     expect(localStorage.getItem('data')).toHaveLength(3);
-  })
+  });
 
   it('check if it change the description of task 2 in local Storage', () => {
     expect(localStorage.getItem('data')[1].description).toBe('Update GitHub profile');
-  })
+  });
 });
