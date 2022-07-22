@@ -39,6 +39,5 @@ describe('check if the task completed or not', () => {
 
   it('check the length of the local Storage', () => {
     expect(localStorage.getItem('data')).toHaveLength(3);
-  })
-
+  });
 });

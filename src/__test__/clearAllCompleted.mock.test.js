@@ -51,33 +51,33 @@ describe('We should delete all the completed tasks', () => {
 
   it('check the length of the localstorage returned', () => {
     expect(localStorage.getItem('data')).toHaveLength(8);
-  })
+  });
 
   it('check the length of the array returned after finishing one task', () => {
     tasksArr[0].completed = true;
     expect(clearAllCompleted(tasksArr)).toHaveLength(7);
-  })
+  });
 
   it('check the length of the localstorage returned after finishing one task', () => {
     expect(localStorage.getItem('data')).toHaveLength(7);
-  })
+  });
 
   it('check the length of the array returned after finishing two tasks', () => {
     tasksArr[1].completed = true;
     tasksArr[7].completed = true;
     expect(clearAllCompleted(tasksArr)).toHaveLength(5);
-  })
+  });
 
   it('check the length of the local Storage returned after finishing two tasks', () => {
     expect(localStorage.getItem('data')).toHaveLength(5);
-  })
+  });
 
   it('check the length of the array returned after finishing all the tasks', () => {
-    tasksArr.forEach(item => {item.completed = true})
+    tasksArr.forEach((item) => { item.completed = true; });
     expect(clearAllCompleted(tasksArr)).toHaveLength(0);
-  })
+  });
 
   it('check the length of the local Storage returned after finishing all the tasks', () => {
     expect(localStorage.getItem('data')).toHaveLength(0);
-  })
-})
+  });
+});
